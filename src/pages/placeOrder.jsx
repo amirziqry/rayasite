@@ -5,7 +5,7 @@ import { Elements } from '@stripe/react-stripe-js'
 import CheckoutForm from '../components/checkoutForm.jsx'
 import Title from '../components/title.jsx'
 
-const stripePromise = loadStripe('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')
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY)
 
 const PlaceOrder = () => {
     const { cartItems, products, currency, getCartAmount, delivery_fee } = useContext(shopContext)

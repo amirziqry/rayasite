@@ -3,13 +3,13 @@ import { useParams } from 'react-router-dom'
 import { shopContext } from '../context/shopContext.jsx'
 import Title from '../components/title.jsx'
 
-import blackdress from '../assets/blackdress.jpeg'
+import blackdress from '../assets/blackdress3.png'
 import blackpack from '../assets/blackpack.jpeg'
 import blackvideo from '../assets/blackvideo.mp4'
-import pinkdress from '../assets/pinkdress.jpeg'
+import pinkdress from '../assets/pinkdress3.png'
 import pinkpack from '../assets/pinkpack.jpeg'
 import pinkvideo from '../assets/pinkvideo.mp4'
-import greendress from '../assets/greendress.jpeg'
+import greendress from '../assets/greendress3.png'
 import greenpack from '../assets/greenpack.jpeg'
 import greenvideo from '../assets/greenvideo.mp4'
 
@@ -34,6 +34,15 @@ const mediaData = [
   },
   {
     productId: "3",
+    label: "Green Lace Suit",
+    slides: [
+      { type: "image", src: greendress },
+      { type: "image", src: greenpack },
+      { type: "video", src: greenvideo },
+    ]
+  },
+  {
+    productId: "4",
     label: "Green Lace Suit",
     slides: [
       { type: "image", src: greendress },
@@ -150,7 +159,7 @@ const Collection = () => {
       <div className='text-center pb-8 text-3xl'>
         <Title text1={'OUR'} text2={'COLLECTION'} />
         <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
-          Handcrafted with care — each piece tells a story.
+          Handcrafted with care.
         </p>
       </div>
 

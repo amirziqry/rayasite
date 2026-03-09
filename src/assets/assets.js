@@ -1,14 +1,14 @@
 // 1. Import all images and icons
-import logo from './dress.png';
+import logo from './lxlogo2.png';
 import cart_icon from './cart.svg';
 import search_icon from './search.svg';
 import profile_icon from './profile.svg';
 import back_icon from './back.svg';
 import menu_icon from './menu.svg';
 import hero_img from './hero_img.jpg'; // Example hero image, replace with actual image if available
-import blackdress from './blackdress.jpeg'
-import pinkdress from './pinkdress.jpeg'
-import greendress from './greendress.jpeg'
+import blackdress from './blackdress3.png'
+import pinkdress from './pinkdress3.png'
+import greendress from './greendress3.png'
 
 // Import at least one product image to test
 // import p_img1 from './p_img1.png'; 
@@ -52,6 +52,18 @@ export const products = [
     },
     {
         _id: "3",
+        name: "Green Lace Suit",
+        description: "Fresh mint green suit with stunning white lace overlay and broderie anglaise hemline. Lightweight and airy fabric ideal for warm weather. A timeless piece that blends tradition with modern style.",
+        price: 279.90,
+        image: [greendress],
+        category: "Women",
+        subCategory: "Suit",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
+    {
+        _id: "4",
         name: "Green Lace Suit",
         description: "Fresh mint green suit with stunning white lace overlay and broderie anglaise hemline. Lightweight and airy fabric ideal for warm weather. A timeless piece that blends tradition with modern style.",
         price: 279.90,

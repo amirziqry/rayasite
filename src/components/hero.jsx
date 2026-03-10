@@ -8,7 +8,7 @@ const Hero = () => { // Note: Components should start with a Capital letter
       
       {/* Left side */} 
       <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>
-        <div className='text-[#414141]'>
+        <div className='text-[#413939]'>
           <div className='flex items-center gap-2'>
             
             

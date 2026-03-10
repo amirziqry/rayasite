@@ -16,22 +16,8 @@ const Contact = () => {
 
         <div className="flex flex-col items-center gap-1">
           <p className="text-xs uppercase tracking-widest text-gray-400">Email</p>
-          <a href="mailto:youremail@gmail.com" className="text-gray-800 font-medium hover:text-black">
-            youremail@gmail.com
-          </a>
-        </div>
-
-        <div className="flex flex-col items-center gap-1">
-          <p className="text-xs uppercase tracking-widest text-gray-400">WhatsApp</p>
-          <a href="https://wa.me/60193767692" target="_blank" rel="noreferrer" className="text-gray-800 font-medium hover:text-black">
-            +60 19-3767692
-          </a>
-        </div>
-
-        <div className="flex flex-col items-center gap-1">
-          <p className="text-xs uppercase tracking-widest text-gray-400">Instagram</p>
-          <a href="https://instagram.com/yourhandle" target="_blank" rel="noreferrer" className="text-gray-800 font-medium hover:text-black">
-            @yourhandle
+          <a href="mailto:byluxeatelier@gmail.com" className="text-gray-800 font-medium hover:text-black">
+            byluxeatelier@gmail.com
           </a>
         </div>
 

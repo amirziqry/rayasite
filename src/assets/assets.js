@@ -1,5 +1,5 @@
 // 1. Import all images and icons
-import logo from './lxlogo2.png';
+import logo from './lx.jpg';
 import cart_icon from './cart.svg';
 import search_icon from './search.svg';
 import profile_icon from './profile.svg';

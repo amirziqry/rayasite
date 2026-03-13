@@ -5,7 +5,7 @@ import search_icon from './search.svg';
 import profile_icon from './profile.svg';
 import back_icon from './back.svg';
 import menu_icon from './menu.svg';
-import hero_img from './hero_img.jpg'; // Example hero image, replace with actual image if available
+import hero_img from './yellowdress.png'; // Example hero image, replace with actual image if available
 import blackdress from './blackdress3.png'
 import pinkdress from './pinkdress3.png'
 import greendress from './greendress3.png'

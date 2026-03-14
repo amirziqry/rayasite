@@ -1,13 +1,13 @@
 import React from 'react'
 
-const footer = () => {
+const Footer = () => {
   return (
-    <div>
-      <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
-    
+    <div className='border-t border-gray-200 mt-20'>
+      <div className='flex items-center justify-center py-8 px-6'>
+        <p className='text-xs text-gray-500 text-center'>Copyright 2026 © Luxe Atelier</p>
       </div>
     </div>
   )
 }
 
-export default footer
+export default Footer

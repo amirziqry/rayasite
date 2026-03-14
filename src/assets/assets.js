@@ -9,6 +9,7 @@ import hero_img from './yellowdress.png'; // Example hero image, replace with ac
 import blackdress from './blackdress3.png'
 import pinkdress from './pinkdress3.png'
 import greendress from './greendress3.png'
+import pink2 from './pink3.png'
 
 // Import at least one product image to test
 // import p_img1 from './p_img1.png'; 
@@ -67,7 +68,7 @@ export const products = [
         name: "Peachy Pink",
         description: "Schiffli embroidered lawn shirt from Pakistan, a premium lightweight breathable cotton fabric	featuring intricate, lace-like embroidery and delicate cutwork created by a specialised machine embroidery. Schiffli embroidery lawn shirt featuring detailed designs, floral with lots of small stitched holes and delicate patterns.							 It is versatile, making it suitable for both casual and formal wear, including festive or special occasions.",
         price: 550,
-        image: [greendress],
+        image: [pink2],
         category: "Women",
         subCategory: "Kebaya Modern",
         sizes: ["M"],

@@ -12,11 +12,13 @@ import pinkvideo from '../assets/pinkvideo.mp4'
 import greendress from '../assets/greendress3.png'
 import greenpack from '../assets/greenpack.jpeg'
 import greenvideo from '../assets/greenvideo.mp4'
+import pink2 from '../assets/pink3.png'
 
 const mediaData = [
   {
     productId: "1",
     label: "Black Floral Suit",
+    category: "Kebaya Modern",
     slides: [
       { type: "image", src: blackdress },
       { type: "image", src: blackpack },
@@ -26,6 +28,7 @@ const mediaData = [
   {
     productId: "2",
     label: "Pink Embroidered Suit",
+    category: "Modern Kurung",
     slides: [
       { type: "image", src: pinkdress },
       { type: "image", src: pinkpack },
@@ -35,6 +38,7 @@ const mediaData = [
   {
     productId: "3",
     label: "Green Lace Suit",
+    category: "Modern Kurung",
     slides: [
       { type: "image", src: greendress },
       { type: "image", src: greenpack },
@@ -43,14 +47,17 @@ const mediaData = [
   },
   {
     productId: "4",
-    label: "Green Lace Suit",
+    label: "Pink Modern",
+    category: "Kebaya Modern",
     slides: [
-      { type: "image", src: greendress },
+      { type: "image", src: pink2 },
       { type: "image", src: greenpack },
       { type: "video", src: greenvideo },
     ]
   }
 ]
+
+const categories = ["Kebaya Modern", "Modern Kurung"]
 
 const ProductCarousel = ({ product, productData, currency, addToCart }) => {
   const [current, setCurrent] = useState(0)
@@ -79,7 +86,6 @@ const ProductCarousel = ({ product, productData, currency, addToCart }) => {
 
   return (
     <div className='flex flex-col gap-4 bg-white rounded-xl shadow-sm p-4'>
-
       {/* Carousel */}
       <div className='relative w-full overflow-hidden rounded-lg bg-gray-100'>
         {slide.type === 'image' ? (
@@ -150,9 +156,24 @@ const Collection = () => {
   const { productId } = useParams()
   const { products, currency, addToCart } = useContext(shopContext)
 
-  const visibleMedia = productId
-    ? mediaData.filter(m => m.productId === productId)
-    : mediaData
+  if (productId) {
+    const item = mediaData.find(m => m.productId === productId)
+    const productData = products.find(p => p._id === productId)
+    if (!item || !productData) return null
+    return (
+      <div className='pt-10 pb-20'>
+        <div className='flex justify-center max-w-md mx-auto'>
+          <ProductCarousel
+            key={item.productId}
+            product={item}
+            productData={productData}
+            currency={currency}
+            addToCart={addToCart}
+          />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className='pt-10 pb-20'>
@@ -163,18 +184,34 @@ const Collection = () => {
         </p>
       </div>
 
-      <div className={productId ? 'flex justify-center max-w-md mx-auto' : 'grid grid-cols-1 sm:grid-cols-3 gap-8'}>
-        {visibleMedia.map((item) => {
-          const productData = products.find(p => p._id === item.productId)
-          if (!productData) return null
+      <div className='flex flex-col gap-14'>
+        {categories.map(category => {
+          const categoryItems = mediaData.filter(m => m.category === category)
           return (
-            <ProductCarousel
-              key={item.productId}
-              product={item}
-              productData={productData}
-              currency={currency}
-              addToCart={addToCart}
-            />
+            <div key={category}>
+              {/* Category Header */}
+              <div className='flex items-center gap-4 mb-6'>
+                <h2 className='text-xl font-semibold text-gray-800 whitespace-nowrap'>{category}</h2>
+                <div className='flex-1 h-px bg-gray-200' />
+              </div>
+
+              {/* Products Grid */}
+              <div className='grid grid-cols-1 sm:grid-cols-2 gap-8'>
+                {categoryItems.map(item => {
+                  const productData = products.find(p => p._id === item.productId)
+                  if (!productData) return null
+                  return (
+                    <ProductCarousel
+                      key={item.productId}
+                      product={item}
+                      productData={productData}
+                      currency={currency}
+                      addToCart={addToCart}
+                    />
+                  )
+                })}
+              </div>
+            </div>
           )
         })}
       </div>

@@ -20,7 +20,7 @@ const Hero = () => { // Note: Components should start with a Capital letter
         </div>
       </div> {/* Added missing closing div for the Left Side */}
       {/* Right side */}
-      <img className='w-full max-w-md mx-auto object-contain' src={assets.hero_img} alt="Hero Image" />
+      <img className='w-full max-w-75 mx-auto object-contain' src={assets.hero_img} alt="Hero Image" />
     </div> /* Main wrapper ends here */
   )
 }

@@ -18,6 +18,7 @@ import navy from '../assets/navy.jpeg'
 import navypack from '../assets/navypack.jpeg'
 import navygold from '../assets/navygold.jpeg'
 import navygoldpack from '../assets/navygoldpack.jpeg'
+import pink2video from '../assets/pink2video.mp4'
 
 const mediaData = [
   {
@@ -57,7 +58,7 @@ const mediaData = [
     slides: [
       { type: "image", src: pink2 },
       { type: "image", src: pink },
-      { type: "video", src: greenvideo },
+      { type: "video", src: pink2video },
     ]
   },
   {

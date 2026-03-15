@@ -13,6 +13,11 @@ import greendress from '../assets/greendress3.png'
 import greenpack from '../assets/greenpack.jpeg'
 import greenvideo from '../assets/greenvideo.mp4'
 import pink2 from '../assets/pink3.png'
+import pink from '../assets/pink.jpeg'
+import navy from '../assets/navy.jpeg'
+import navypack from '../assets/navypack.jpeg'
+import navygold from '../assets/navygold.jpeg'
+import navygoldpack from '../assets/navygoldpack.jpeg'
 
 const mediaData = [
   {
@@ -48,16 +53,34 @@ const mediaData = [
   {
     productId: "4",
     label: "Pink Modern",
-    category: "Kebaya Modern",
+    category: "Modern Kurung",
     slides: [
       { type: "image", src: pink2 },
-      { type: "image", src: greenpack },
+      { type: "image", src: pink },
       { type: "video", src: greenvideo },
     ]
-  }
+  },
+  {
+    productId: "5",
+    label: "Navy Blue Suit",
+    category: "Unstitched Suit",
+    slides: [
+      { type: "image", src: navy },
+      { type: "image", src: navypack },
+    ]
+  },
+  {
+    productId: "6",
+    label: "Navy Blue with Gold Accents",
+    category: "Unstitched Suit",
+    slides: [
+      { type: "image", src: navygold },
+      { type: "image", src: navygoldpack },
+    ]
+  },
 ]
 
-const categories = ["Kebaya Modern", "Modern Kurung"]
+const categories = ["Kebaya Modern", "Modern Kurung", "Unstitched Suit"]
 
 const ProductCarousel = ({ product, productData, currency, addToCart }) => {
   const [current, setCurrent] = useState(0)

@@ -10,6 +10,7 @@ import blackdress from './blackdress3.png'
 import pinkdress from './pinkdress3.png'
 import greendress from './greendress3.png'
 import pink2 from './pink3.png'
+import navy from './navy.jpeg'
 
 // Import at least one product image to test
 // import p_img1 from './p_img1.png'; 
@@ -71,6 +72,30 @@ export const products = [
         image: [pink2],
         category: "Women",
         subCategory: "Kebaya Modern",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
+    {
+        _id: "5",
+        name: "Navy Blue",
+        description: "Premium Pakistani Lawn Schiffli Embroidered 3-Piece Unstitched Suit		- Breathable fabric		- Elegant design		- Matching dupatta		- Tailor to your own style		- Limited stock",
+        price: 200,
+        image: [navy],
+        category: "Women",
+        subCategory: "Unstitched Suit",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
+    {
+        _id: "6",
+        name: "Navy Blue with Gold Accents",
+        description: "Premium Pakistani Lawn Schiffli Embroidered 3-Piece Unstitched Suit		- Breathable fabric		- Elegant design		- Matching dupatta		- Tailor to your own style		- Limited stock",
+        price: 200,
+        image: [navy],
+        category: "Women",
+        subCategory: "Unstitched Suit",
         sizes: ["M"],
         date: 1716634345450,
         bestseller: false

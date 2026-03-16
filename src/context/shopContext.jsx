@@ -1,60 +1,78 @@
-import { createContext, useState } from "react";
-import { products } from "../assets/assets";
+import { createContext, useState, useEffect } from "react"
+import { products } from "../assets/assets"
 
-export const shopContext = createContext();
+export const shopContext = createContext()
 
 const ShopProvider = (props) => {
 
-    const currency = 'RM';
-    const delivery_fee = 10;
-    const [cartItems, setCartItems] = useState({});
+  const currency = 'RM'
+  const delivery_fee = 10
 
-    const addToCart = (itemId, size) => {
-        if (!size) { alert("Please select a size"); return; }
-        let cartData = structuredClone(cartItems);
-        if (cartData[itemId]) {
-            if (cartData[itemId][size]) { cartData[itemId][size] += 1; }
-            else { cartData[itemId][size] = 1; }
-        } else {
-            cartData[itemId] = {};
-            cartData[itemId][size] = 1;
-        }
-        setCartItems(cartData);
-    };
+  // Load cart from localStorage on first render
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      const saved = localStorage.getItem('cartItems')
+      return saved ? JSON.parse(saved) : {}
+    } catch {
+      return {}
+    }
+  })
 
-    const getCartCount = () => {
-        let total = 0;
-        for (const id in cartItems)
-            for (const size in cartItems[id])
-                total += cartItems[id][size];
-        return total;
-    };
+  // Save to localStorage whenever cart changes
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
+  }, [cartItems])
 
-    const updateQuantity = (itemId, size, quantity) => {
-        let cartData = structuredClone(cartItems);
-        cartData[itemId][size] = quantity;
-        if (quantity === 0) delete cartData[itemId][size];
-        setCartItems(cartData);
-    };
+  const addToCart = (itemId, size) => {
+    if (!size) { alert("Please select a size"); return }
+    let cartData = structuredClone(cartItems)
+    if (cartData[itemId]) {
+      if (cartData[itemId][size]) { cartData[itemId][size] += 1 }
+      else { cartData[itemId][size] = 1 }
+    } else {
+      cartData[itemId] = {}
+      cartData[itemId][size] = 1
+    }
+    setCartItems(cartData)
+  }
 
-    const getCartAmount = () => {
-        let total = 0;
-        for (const id in cartItems) {
-            const item = products.find(p => p._id === id);
-            if (!item) continue;
-            for (const size in cartItems[id])
-                total += item.price * cartItems[id][size];
-        }
-        return total;
-    };
+  const getCartCount = () => {
+    let total = 0
+    for (const id in cartItems)
+      for (const size in cartItems[id])
+        total += cartItems[id][size]
+    return total
+  }
 
-    const value = { products, currency, delivery_fee, cartItems, setCartItems,addToCart, getCartCount, updateQuantity, getCartAmount };
+  const updateQuantity = (itemId, size, quantity) => {
+    let cartData = structuredClone(cartItems)
+    cartData[itemId][size] = quantity
+    if (quantity === 0) delete cartData[itemId][size]
+    setCartItems(cartData)
+  }
 
-    return (
-        <shopContext.Provider value={value}>
-            {props.children}
-        </shopContext.Provider>
-    );
-};
+  const getCartAmount = () => {
+    let total = 0
+    for (const id in cartItems) {
+      const item = products.find(p => p._id === id)
+      if (!item) continue
+      for (const size in cartItems[id])
+        total += item.price * cartItems[id][size]
+    }
+    return total
+  }
 
-export default ShopProvider;
+  const value = {
+    products, currency, delivery_fee,
+    cartItems, setCartItems,
+    addToCart, getCartCount, updateQuantity, getCartAmount
+  }
+
+  return (
+    <shopContext.Provider value={value}>
+      {props.children}
+    </shopContext.Provider>
+  )
+}
+
+export default ShopProvider

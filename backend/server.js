@@ -4,6 +4,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 
 dotenv.config()
+console.log('Key loaded:', process.env.STRIPE_SECRET_KEY ? 'YES' : 'NO')
 
 const app = express()
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)

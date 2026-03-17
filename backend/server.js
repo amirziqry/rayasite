@@ -35,4 +35,5 @@ app.post('/create-payment-intent', async (req, res) => {
   }
 })
 
-app.listen(4000, () => console.log('Server running on port 4000'))
+// Change this line at the bottom of server.js
+app.listen(process.env.PORT || 4000, () => console.log('Server running'))

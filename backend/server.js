@@ -9,7 +9,7 @@ console.log('Key loaded:', process.env.STRIPE_SECRET_KEY ? 'YES' : 'NO')
 const app = express()
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
-app.use(cors({ origin: process.env.CLIENT_URL }))
+app.use(cors())
 app.use(express.json())
 
 app.post('/create-payment-intent', async (req, res) => {

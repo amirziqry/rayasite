@@ -78,18 +78,6 @@ export const products = [
         bestseller: false
     },
     {
-        _id: "5",
-        name: "Navy Blue",
-        description: "Premium Pakistani Lawn Schiffli Embroidered 3-Piece Unstitched Suit		- Breathable fabric		- Elegant design		- Matching dupatta		- Tailor to your own style		- Limited stock",
-        price: 200,
-        image: [navy],
-        category: "Women",
-        subCategory: "Unstitched Suit",
-        sizes: ["M"],
-        date: 1716634345450,
-        bestseller: false
-    },
-    {
         _id: "6",
         name: "Navy Blue with Gold Accents",
         description: "Premium Pakistani Lawn Schiffli Embroidered 3-Piece Unstitched Suit		- Breathable fabric		- Elegant design		- Matching dupatta		- Tailor to your own style		- Limited stock",

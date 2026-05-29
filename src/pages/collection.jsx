@@ -19,6 +19,18 @@ import navypack from '../assets/navypack.jpeg'
 import navygold from '../assets/navygold.jpeg'
 import navygoldpack from '../assets/navygoldpack.jpeg'
 import pink2video from '../assets/pink2video.mp4'
+import model1 from '../assets/model1.jpeg'
+import model2 from '../assets/model2.jpeg'
+import model3 from '../assets/model3.jpeg'  
+import model4 from '../assets/model4.jpeg'
+import model5 from '../assets/model5.jpeg'
+import model6 from '../assets/model6.jpeg'
+import kain1 from '../assets/kain1.jpeg'
+import kain2 from '../assets/kain2.jpeg'  
+import kain3 from '../assets/kain3.jpeg'
+import kain4 from '../assets/kain4.jpeg'
+import kain5 from '../assets/kain5.jpeg'
+import kain6 from '../assets/kain6.jpeg'
 
 const mediaData = [
   {
@@ -77,6 +89,60 @@ const mediaData = [
     slides: [
       { type: "image", src: navygold },
       { type: "image", src: navygoldpack },
+    ]
+  },
+  {
+    productId: "7",
+    label: "3-piece embroidered lawn suit",
+    category: "Unstitched Suit",
+    slides: [
+      { type: "image", src: model1 },
+      { type: "image", src: kain1 },
+    ]
+  },
+  {
+    productId: "8",
+    label: "3-piece embroidered lawn suit",
+    category: "Unstitched Suit",
+    slides: [
+      { type: "image", src: model2 },
+      { type: "image", src: kain2 },
+    ]
+  },
+  {
+    productId: "9",
+    label: "3-piece embroidered lawn suit",
+    category: "Unstitched Suit",
+    slides: [
+      { type: "image", src: model3 },
+      { type: "image", src: kain3 },
+    ]
+  },
+  {
+    productId: "10",
+    label: "3-piece embroidered lawn suit",
+    category: "Unstitched Suit",
+    slides: [
+      { type: "image", src: model4 },
+      { type: "image", src: kain4 },
+    ]
+  },
+  {
+    productId: "11",
+    label: "3-piece embroidered lawn suit",
+    category: "Unstitched Suit",
+    slides: [
+      { type: "image", src: model5 },
+      { type: "image", src: kain5 },
+    ]
+  },
+  {
+    productId: "12",
+    label: "3-piece embroidered lawn suit",
+    category: "Unstitched Suit",
+    slides: [
+      { type: "image", src: model6 },
+      { type: "image", src: kain6 },
     ]
   },
 ]

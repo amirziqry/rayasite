@@ -12,6 +12,19 @@ import greendress from './greendress3.png'
 import pink2 from './pink3.png'
 import navy from './navy.jpeg'
 import navygold from './navygold.jpeg'
+import model1 from './model1.jpeg'
+import model2 from './model2.jpeg'
+import model3 from './model3.jpeg'
+import model4 from './model4.jpeg'
+import model5 from './model5.jpeg'
+import model6 from './model6.jpeg'
+import kain1 from './kain1.jpeg'
+import kain2 from './kain2.jpeg'
+import kain3 from './kain3.jpeg'
+import kain4 from './kain4.jpeg'
+import kain5 from './kain5.jpeg'
+import kain6 from './kain6.jpeg'
+
 
 // Import at least one product image to test
 // import p_img1 from './p_img1.png'; 
@@ -88,5 +101,77 @@ export const products = [
         sizes: ["M"],
         date: 1716634345450,
         bestseller: false
-    }
+    },
+    {
+        _id: "7",
+        name: "3-piece embroidered lawn suit",
+        description: "- embroidered textured lawn shirt - ⁠dyed textured lawn sleeves & back - ⁠printed manaar dupatta - ⁠embroidered hem & sleeves border",
+        price: 140,
+        image: [model1],
+        category: "Women",
+        subCategory: "Unstitched Suit",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
+    {
+        _id: "8",
+        name: "3-piece embroidered lawn suit",
+        description: "- embroidered textured lawn shirt - ⁠embroidered textured lawn sleeves - ⁠embroidered blended chiffon dupatta - ⁠embroidered front & hem border",
+        price: 210,
+        image: [model2],
+        category: "Women",
+        subCategory: "Unstitched Suit",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
+    {
+        _id: "9",
+        name: "3-piece embroidered lawn suit",
+        description: "- embroidered viscose satin shirt front - ⁠embroidered viscose satin sleeves - ⁠printed viscose satin back - ⁠embroidered blended chiffon dupatta",
+        price: 230,
+        image: [model3],
+        category: "Women",
+        subCategory: "Unstitched Suit",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
+    {
+        _id: "10",
+        name: "3-piece embroidered lawn suit",
+        description: "- embroidered lawn shirt - ⁠printed lawn sleeves & back - ⁠printed voile dupatta - ⁠embroidered hem patch",
+        price: 100,
+        image: [model4],
+        category: "Women",
+        subCategory: "Unstitched Suit",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
+    {
+        _id: "11",
+        name: "3-piece embroidered lawn suit",
+        description: "- embroidered lawn shirt - ⁠printed lawn sleeves & back - ⁠printed voile dupatta - ⁠embroidered front border",
+        price: 100,
+        image: [model5],
+        category: "Women",
+        subCategory: "Unstitched Suit",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
+    {
+        _id: "12",
+        name: "3-piece embroidered lawn suit",
+        description: "- embroidered lawn shirt - ⁠embroidered lawn sleeves - ⁠embroidered blended karandi dupatta - ⁠embroidered neckline",
+        price: 300,
+        image: [model6],
+        category: "Women",
+        subCategory: "Unstitched Suit",
+        sizes: ["M"],
+        date: 1716634345450,
+        bestseller: false
+    },
 ]

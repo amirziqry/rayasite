@@ -98,7 +98,6 @@ export const products = [
         image: [navygold],
         category: "Women",
         subCategory: "Unstitched Suit",
-        sizes: ["M"],
         date: 1716634345450,
         bestseller: false
     },
@@ -110,7 +109,6 @@ export const products = [
         image: [model1],
         category: "Women",
         subCategory: "Unstitched Suit",
-        sizes: ["M"],
         date: 1716634345450,
         bestseller: false
     },
@@ -122,7 +120,6 @@ export const products = [
         image: [model2],
         category: "Women",
         subCategory: "Unstitched Suit",
-        sizes: ["M"],
         date: 1716634345450,
         bestseller: false
     },
@@ -134,7 +131,6 @@ export const products = [
         image: [model3],
         category: "Women",
         subCategory: "Unstitched Suit",
-        sizes: ["M"],
         date: 1716634345450,
         bestseller: false
     },
@@ -146,7 +142,6 @@ export const products = [
         image: [model4],
         category: "Women",
         subCategory: "Unstitched Suit",
-        sizes: ["M"],
         date: 1716634345450,
         bestseller: false
     },
@@ -158,7 +153,6 @@ export const products = [
         image: [model5],
         category: "Women",
         subCategory: "Unstitched Suit",
-        sizes: ["M"],
         date: 1716634345450,
         bestseller: false
     },
@@ -170,7 +164,6 @@ export const products = [
         image: [model6],
         category: "Women",
         subCategory: "Unstitched Suit",
-        sizes: ["M"],
         date: 1716634345450,
         bestseller: false
     },

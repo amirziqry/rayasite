@@ -45,7 +45,7 @@ const mediaData = [
   },
   {
     productId: "2",
-    label: "Pink Embroidered Suit",
+    label: "Pink Embro Embroidered Suit",
     category: "Modern Kurung",
     slides: [
       { type: "image", src: pinkdress },
@@ -152,7 +152,10 @@ const categories = ["Kebaya Modern", "Modern Kurung", "Unstitched Suit"]
 const ProductCarousel = ({ product, productData, currency, addToCart }) => {
   const [current, setCurrent] = useState(0)
   const [muted, setMuted] = useState(true)
-  const [selectedSize, setSelectedSize] = useState('M')
+  
+  // Safeguard: Check if sizes array exists and is populated
+  const hasSizes = productData.sizes && productData.sizes.length > 0
+  const [selectedSize, setSelectedSize] = useState(hasSizes ? 'M' : '')
   const [addedMsg, setAddedMsg] = useState(false)
   const videoRef = useRef(null)
 
@@ -167,12 +170,14 @@ const ProductCarousel = ({ product, productData, currency, addToCart }) => {
   }, [current])
 
   const handleAddToCart = () => {
+    // Passes 'M' or an empty string depending on whether the product has sizes
     addToCart(productData._id, selectedSize)
     setAddedMsg(true)
     setTimeout(() => setAddedMsg(false), 2000)
   }
 
   const slide = product.slides[current]
+  const isUnstitched = product.category === "Unstitched Suit"
 
   return (
     <div className='flex flex-col gap-4 bg-white rounded-xl shadow-sm p-4'>
@@ -216,20 +221,22 @@ const ProductCarousel = ({ product, productData, currency, addToCart }) => {
         <p className='text-sm text-gray-500 mt-2 leading-relaxed'>{productData.description}</p>
       </div>
 
-      {/* Size */}
-      <div>
-        <p className='text-xs font-medium text-gray-600 mb-2 uppercase tracking-wider'>Size</p>
-        <div className='flex gap-2'>
-          {productData.sizes.map(size => (
-            <button key={size} onClick={() => setSelectedSize(size)}
-              className={`px-4 py-1.5 border text-sm rounded transition-all
-                ${selectedSize === size ? 'border-black bg-black text-white' : 'border-gray-300 text-gray-700 hover:border-gray-500'}`}
-            >
-              {size}
-            </button>
-          ))}
+      {/* Size Selector: Completely hidden if Unstitched OR if sizes array is missing */}
+      {!isUnstitched && hasSizes && (
+        <div>
+          <p className='text-xs font-medium text-gray-600 mb-2 uppercase tracking-wider'>Size</p>
+          <div className='flex gap-2'>
+            {productData.sizes.map(size => (
+              <button key={size} onClick={() => setSelectedSize(size)}
+                className={`px-4 py-1.5 border text-sm rounded transition-all
+                  ${selectedSize === size ? 'border-black bg-black text-white' : 'border-gray-300 text-gray-700 hover:border-gray-500'}`}
+              >
+                {size}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Add to Cart */}
       <button
